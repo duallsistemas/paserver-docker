@@ -60,11 +60,14 @@ RUN \
     ln -sf '/usr/lib/x86_64-linux-gnu/libcurl.so.4' '/usr/lib/x86_64-linux-gnu/libcurl.so' && \
     ln -sf '/usr/lib/x86_64-linux-gnu/libsagui.so.2.4.7' '/usr/lib/x86_64-linux-gnu/libsagui.so.2' && \
     ln -sf '/usr/lib/x86_64-linux-gnu/libsagui.so.2.4.7' '/usr/lib/x86_64-linux-gnu/libsagui.so' && \
-    ldconfig && \
+    ldconfig
+
+RUN \
     tar -zxf LinuxPAServer20.0.tar.gz && \
     mv PAServer-20.0/paserver.config /etc/ && \
-    mv PAServer-20.0/* /usr/bin/ && \
-    groupadd paserver && useradd paserver -m -g paserver
+    mv PAServer-20.0/* /usr/bin/
+
+RUN groupadd paserver && useradd paserver -m -g paserver
 
 WORKDIR /usr/bin
 
