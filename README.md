@@ -1,6 +1,6 @@
 # Description
 
-Official image to use PAServer from containers.
+Official image to use PAServer and Duall from containers.
 
 This image is available at Docker Hub [here](https://hub.docker.com/r/duallsistemas/paserver) and at GitHub packages [here](https://github.com/duallsistemas/paserver-docker/packages).
 
