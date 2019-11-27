@@ -31,7 +31,7 @@ FROM ubuntu:bionic
 
 LABEL Maintainer="Duall Sistemas <duallsistemas@gmail.com>"
 LABEL Name="PAServer"
-LABEL Version="10.3.3"
+LABEL Version="10.3.2"
 
 ENV DEBIAN_FRONTEND noninteractive
 
