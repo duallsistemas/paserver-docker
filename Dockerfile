@@ -56,9 +56,11 @@ COPY mime.types /etc/
 COPY duallapi.config /etc/
 
 RUN \
+    ln -sf '/lib/x86_64-linux-gnu/libz.so.1' '/usr/lib/x86_64-linux-gnu/libz.so' && \
     ln -sf '/usr/lib/x86_64-linux-gnu/libcares.so.2' '/usr/lib/x86_64-linux-gnu/libcares.so' && \
     ln -sf '/usr/lib/x86_64-linux-gnu/libcrypto.so.1.0.0' '/usr/lib/x86_64-linux-gnu/libcrypto.so' && \
     ln -sf '/usr/lib/x86_64-linux-gnu/libcurl.so.4' '/usr/lib/x86_64-linux-gnu/libcurl.so' && \
+    ln -sf '/usr/lib/x86_64-linux-gnu/libxml2.so.2' '/usr/lib/x86_64-linux-gnu/libxml2.so' && \
     ln -sf '/usr/lib/x86_64-linux-gnu/libsagui.so.2.4.7' '/usr/lib/x86_64-linux-gnu/libsagui.so.2' && \
     ln -sf '/usr/lib/x86_64-linux-gnu/libsagui.so.2.4.7' '/usr/lib/x86_64-linux-gnu/libsagui.so' && \
     ldconfig
