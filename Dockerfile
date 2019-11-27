@@ -44,7 +44,8 @@ RUN apt-get update && apt-get install -qy --no-install-recommends \
     libcurl3 \
     libcurl-openssl1.0-dev \
     libxml2 \
-    libxslt1.1
+    libxslt1.1 && \
+    apt-get autoremove && apt-get autoclean && rm -rf /var/lib/apt/lists/*
 
 COPY --from=downloader /LinuxPAServer20.0.tar.gz /
 
