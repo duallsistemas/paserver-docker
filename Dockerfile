@@ -31,7 +31,7 @@ FROM ubuntu:bionic
 
 LABEL Maintainer="Duall Sistemas <duallsistemas@gmail.com>"
 LABEL Name="PAServer"
-LABEL Version="10.3.2"
+LABEL Version="10.3.3"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -83,4 +83,4 @@ VOLUME [ "/home/paserver" ]
 
 EXPOSE 9090/tcp 64211/tcp
 
-CMD [ "/usr/bin/paserver.sh" ]
+CMD [ "paserver", "-scratchdir=/home/paserver", "-unrestricted", "-password=", "-config=/etc/paserver.config" ]
