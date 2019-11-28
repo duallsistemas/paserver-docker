@@ -51,8 +51,6 @@ COPY --from=downloader /LinuxPAServer20.0.tar.gz /
 
 COPY --from=downloader /usr/local/lib/libsagui.so.2.4.7 /usr/lib/x86_64-linux-gnu/
 
-COPY paserver.sh /usr/bin/
-
 COPY mime.types /etc/
 
 COPY duallapi.config /etc/
@@ -70,8 +68,7 @@ RUN \
 RUN \
     tar -zxf LinuxPAServer20.0.tar.gz && \
     mv PAServer-20.0/paserver.config /etc/ && \
-    mv PAServer-20.0/* /usr/bin/ && \
-    chmod +x /usr/bin/paserver.sh
+    mv PAServer-20.0/* /usr/bin/
 
 RUN groupadd paserver && useradd paserver -m -g paserver
 
