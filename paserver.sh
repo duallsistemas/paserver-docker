@@ -4,4 +4,4 @@
 # Copyright (C) 2019 Duall Sistemas Ltda.
 ###############################################################
 
-paserver -scratchdir=/home/paserver -unrestricted -config=/etc/paserver.config -password=
+paserver -scratchdir=/home/paserver -unrestricted -password= -config=/etc/paserver.config
