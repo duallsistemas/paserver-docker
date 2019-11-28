@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -qy --no-install-recommends \
     libgnutls28-dev
 
 RUN \
-    curl -SOJ http://altd.embarcadero.com/releases/studio/20.0/PAServer/Release2/LinuxPAServer20.0.tar.gz && \
+    curl -SOJ http://altd.embarcadero.com/releases/studio/20.0/PAServer/Release3/LinuxPAServer20.0.tar.gz && \
     curl -SL https://github.com/risoflora/libsagui/archive/v2.4.7.tar.gz | tar -zx && \
     cd libsagui-2.4.7/ && mkdir build && cd build/ && \
     cmake -DSG_HTTPS_SUPPORT=ON .. && \
