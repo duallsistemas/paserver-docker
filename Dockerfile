@@ -39,6 +39,7 @@ RUN apt-get update && apt-get install -qy --no-install-recommends \
     ca-certificates \
     build-essential \
     libltdl7 \
+    libgnutls30 \
     openssl1.0 \
     libc-ares2 \
     libcurl3 \
@@ -54,7 +55,7 @@ COPY --from=downloader /usr/local/lib/libsagui.so.2.4.7 /usr/lib/x86_64-linux-gn
 
 COPY mime.types /etc/
 
-COPY duallapi.config /etc/
+COPY duallservice.config /etc/
 
 RUN \
     ln -sf '/lib/x86_64-linux-gnu/libz.so.1' '/usr/lib/x86_64-linux-gnu/libz.so' && \
